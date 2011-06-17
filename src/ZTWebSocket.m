@@ -30,7 +30,7 @@ enum {
 }
 
 -(id)initWithURLString:(NSString *)urlString delegate:(id<ZTWebSocketDelegate>)aDelegate {
-    if (self=[super init]) {
+    if ((self=[super init])) {
         self.delegate = aDelegate;
         url = [[NSURL URLWithString:urlString] retain];
         if (![url.scheme isEqualToString:@"ws"]) {
